@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app_front') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app_front') }}
+        {% endblock %}
+    </head>
+    <body>
+        <!-- begin #header -->
+        <div id="header" class="header navbar navbar-default navbar-expand-lg navbar-fixed-top">
+            <!-- begin container -->
+            <div class="container">
+                <!-- begin navbar-brand -->
+                <a href="index.html" class="navbar-brand">
+                    <span class="brand-logo"></span>
+                    <span class="brand-text">
+                        COLOR ADMIN
+                    </span>
+                </a>
+                <!-- end navbar-brand -->
+                <!-- begin navbar-toggle -->
+                <button type="button" class="navbar-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#header-navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- end navbar-toggle -->
+                <!-- begin navbar-collapse -->
+                <div class="collapse navbar-collapse" id="header-navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" data-bs-toggle="dropdown">HOME <b class="caret"></b></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="index_transparent_header.html">Page with Transparent Header</a>
+                                <a class="dropdown-item" href="index_inverse_header.html">Page with Inverse Header</a>
+                                <a class="dropdown-item" href="index.html">Default Header</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-bs-toggle="dropdown">POSTS <b class="caret"></b></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="post_grid.html">Page with Grid View Blog Post</a>
+                                <a class="dropdown-item" href="post_without_sidebar.html">Page without Sidebar</a>
+                            </div>
+                        </li>
+                        <li><a href="about_me.html">ABOUT ME</a></li>
+                        <li><a href="contact_us.html">CONTACT US</a></li>
+                        <li><a href="https://wrapbootstrap.com/theme/color-admin-admin-template-front-end-WB0N89JMK">PURCHASE</a></li>
+                    </ul>
+                </div>
+                <!-- end navbar-collapse -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #header -->
+        <!-- begin #page-title -->
+        <div id="page-title" class="page-title has-bg">
+            <div class="bg-cover" data-paroller="true" data-paroller-factor="0.5" data-paroller-factor-xs="0.2" style="background: url('http://panoramas.loucrup65.fr/_wp_generated/wpeb5036f3_05_06.jpg') center 0px / cover no-repeat"></div>
+            <div class="container">
+                <h1>Official Color Admin Blog</h1>
+                <p>Blog Concept Front End Page</p>
+            </div>
+        </div>
+        <!-- end #page-title -->
+        {% block body %}{% endblock %}
+        <!-- begin #footer -->
+        <div id="footer" class="footer">
+            <!-- begin container -->
+            <div class="container">
+                <!-- begin row -->
+                <div class="row">
+                    <!-- begin col-3 -->
+                    <div class="col-md-3 col-6">
+                        <!-- begin section-container -->
+                        <div class="section-container">
+                            <h4 class="footer-title">Categories</h4>
+                            <ul class="categories">
+                                <li><a href="#">Sports</a></li>
+                                <li><a href="#">Outdoor Sports</a></li>
+                                <li><a href="#">Indoor Sports</a></li>
+                                <li><a href="#">Video Shooting</a></li>
+                                <li><a href="#">Drone</a></li>
+                                <li><a href="#">Uncategorized</a></li>
+                            </ul>
+                        </div>
+                        <!-- end section-container -->
+                    </div>
+                    <!-- end col-3 -->
+                    <!-- begin col-3 -->
+                    <div class="col-md-3 col-6">
+                        <!-- begin section-container -->
+                        <div class="section-container">
+                            <h4 class="footer-title">Archives</h4>
+                            <ul class="archives">
+                                <li><a href="#">June 2021</a> <span class="total">(102)</span></li>
+                                <li><a href="#">May 2021</a> <span class="total">(46)</span></li>
+                                <li><a href="#">April 2021</a> <span class="total">(84)</span></li>
+                                <li><a href="#">March 2021</a> <span class="total">(67)</span></li>
+                                <li><a href="#">February 2021</a> <span class="total">(99)</span></li>
+                                <li><a href="#">January 2021</a> <span class="total">(113)</span></li>
+                                <li><a href="#">December 2017</a> <span class="total">(25)</span></li>
+                            </ul>
+                        </div>
+                        <!-- end section-container -->
+                    </div>
+                    <!-- end col-3 -->
+                    <!-- begin col-3 -->
+                    <div class="col-md-3 col-6">
+                        <!-- begin section-container -->
+                        <div class="section-container">
+                            <h4 class="footer-title">Recent Posts</h4>
+                            <ul class="recent-post">
+                                <li>
+                                    <h4>
+                                        <a href="#">Nam ut urna hendrerit</a>
+                                        <span class="time">February 22, 2021</span>
+                                    </h4>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <a href="#">Class aptent taciti sociosqu</a>
+                                        <span class="time">July 15, 2021</span>
+                                    </h4>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <a href="#">Donec rhoncus arcu</a>
+                                        <span class="time">March 21, 2021</span>
+                                    </h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end section-container -->
+                    </div>
+                    <!-- end col-3 -->
+                    <!-- begin col-3 -->
+                    <div class="col-md-3 col-6">
+                        <div class="section-container">
+                            <h4 class="footer-title">About Color Admin</h4>
+                            <address>
+                                <strong>Twitter, Inc.</strong><br />
+                                795 Folsom Ave, Suite 600<br />
+                                San Francisco, CA 94107<br />
+                                P: (123) 456-7890<br />
+                                <br />
+                                <strong>Full Name</strong><br />
+                                <a href="#">first.last@example.com</a>
+                            </address>
+                        </div>
+                        <!-- end section-container -->
+                    </div>
+                    <!-- end col-3 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #footer -->
+        <!-- begin #footer-copyright -->
+        <div id="footer-copyright" class="footer-copyright">
+            <!-- begin container -->
+            <div class="container d-sm-flex">
+                <span class="copyright d-block">&copy; 2021 SeanTheme All Right Reserved</span>
+                <ul class="social-media-list mt-2 mt-sm-0 flex-1">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                </ul>
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #footer-copyright -->
+    </body>
+</html>

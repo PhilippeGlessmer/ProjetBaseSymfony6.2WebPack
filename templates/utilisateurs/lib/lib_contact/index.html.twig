@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LibContact index{% endblock %}
+
+{% block body %}
+    <h1>LibContact index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Libelle</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for lib_contact in lib_contacts %}
+            <tr>
+                <td>{{ lib_contact.id }}</td>
+                <td>{{ lib_contact.libelle }}</td>
+                <td>
+                    <a href="{{ path('app_utilisateurs_lib_lib_contact_show', {'id': lib_contact.id}) }}">show</a>
+                    <a href="{{ path('app_utilisateurs_lib_lib_contact_edit', {'id': lib_contact.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_utilisateurs_lib_lib_contact_new') }}">Create new</a>
+{% endblock %}

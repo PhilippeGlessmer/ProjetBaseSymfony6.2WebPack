@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UserProfil index{% endblock %}
+
+{% block body %}
+    <h1>UserProfil index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Genre</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>NaissanceAt</th>
+                <th>Avatar</th>
+                <th>CreatedAt</th>
+                <th>UpadatedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user_profil in user_profils %}
+            <tr>
+                <td>{{ user_profil.id }}</td>
+                <td>{{ user_profil.genre }}</td>
+                <td>{{ user_profil.nom }}</td>
+                <td>{{ user_profil.prenom }}</td>
+                <td>{{ user_profil.naissanceAt ? user_profil.naissanceAt|date('Y-m-d') : '' }}</td>
+                <td>{{ user_profil.avatar }}</td>
+                <td>{{ user_profil.createdAt ? user_profil.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ user_profil.upadatedAt ? user_profil.upadatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_utilisateurs_user_profil_show', {'id': user_profil.id}) }}">show</a>
+                    <a href="{{ path('app_utilisateurs_user_profil_edit', {'id': user_profil.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_utilisateurs_user_profil_new') }}">Create new</a>
+{% endblock %}

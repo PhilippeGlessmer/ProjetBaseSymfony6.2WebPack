@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New LibContact{% endblock %}
+
+{% block body %}
+    <h1>Create new LibContact</h1>
+
+    {{ include('utilisateurs/lib/lib_contact/_form.html.twig') }}
+
+    <a href="{{ path('app_utilisateurs_lib_lib_contact_index') }}">back to list</a>
+{% endblock %}

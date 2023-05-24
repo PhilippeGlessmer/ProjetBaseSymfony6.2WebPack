@@ -1,0 +1,27 @@
+{# templates/bundles/TwigBundle/Exception/error404.html.twig#}
+{% extends 'error.html.twig' %}
+
+{% block body %}
+    <!-- BEGIN #app -->
+    <div id="app" class="app">
+        <!-- BEGIN error -->
+        <div class="error">
+            <div class="error-code">{{status_code}}</div>
+            <div class="error-content">
+                <div class="error-message">Nous ne l'avons pas trouvé...</div>
+                <div class="error-desc mb-4">
+{#                    {{exception.message}}#}
+{#                    <p>Le texte est : {{status_text}}</p>#}
+                </div>
+                <div>
+                    <a href="{{ path('app_backoffice_home') }}" class="btn btn-success px-3">Accueil</a>
+                </div>
+            </div>
+        </div>
+        <!-- END error -->
+        <!-- BEGIN scroll-top-btn -->
+        <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top" data-toggle="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+        <!-- END scroll-top-btn -->
+    </div>
+    <!-- END #app -->
+{% endblock %}
